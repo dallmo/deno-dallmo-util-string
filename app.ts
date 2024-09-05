@@ -3,6 +3,20 @@
  * @module dallmo-util-string
  */
 
+// import libraries
+import {
+  util_random_string,
+} from "./etc/deps.ts";
+
+// import interfaces
+import {
+  Random_String_Option_Obj,
+} from "./etc/interfaces.ts";
+
+// import default values
+import {
+  default_random,
+} from "./etc/default-random.ts";
 //////////////////////////////////////////////////////////////
 /**
  * convert the input_string as title case,
@@ -104,6 +118,24 @@ function tail( input_string: string, num: number ): string{
 }; // function
 //////////////////////////////////////////////////////////////
 /**
+ * generate a random string, with optional para in length and chars to avoid
+ * --------------
+ * @function random
+ * @param {object} an optional object, with the random string length and/or array of chars to avoid
+ * @returns {string} the generated random string
+ */
+// option_obj is optional, with default values here
+function random(
+  option_obj: Random_String_Option_Obj = {
+    random_string_length: default_random.random_string_length,
+    array_char_avoid:     default_random.array_char_avoid,
+  }): string{
+
+  return util_random_string.main( option_obj );
+
+}; // function
+//////////////////////////////////////////////////////////////
+/**
  * test connecting to this module from parent
  * --------------
  * @function test
@@ -111,7 +143,7 @@ function tail( input_string: string, num: number ): string{
  */
 function test(): string{
   return "ok";
-}// 
+}; // function
 //////////////////////////////////////////////////////////////
 export {
 
@@ -122,5 +154,9 @@ export {
   case_upper,
   head,
   tail,
+  
+  random,
 
 }; // export
+
+

@@ -2,9 +2,16 @@
 // deno test methods and other util methods
 import { 
 
-  assertEquals 
+  assertEquals,
+  dallmo_util_math,
 
 } from "../etc/deps.ts";
+
+import {
+
+  default_random,
+
+} from "../etc/default-random.ts";
 
 // the methods of this module to be tested
 import * as dallmo_util_string from "../mod.ts";
@@ -181,6 +188,39 @@ Deno.test( "test - tail", async(t) => {
 
   }); // step
   //.................................................
-}); // Deno.test
+}); // Deno.test, tail
 //////////////////////////////////////////////////////////////
+Deno.test( "test - random", async(t) => {
+
+  let result: string;
+  let result_length: number;
+  //.................................................
+  // 1. output length : == 6, default
+  await t.step("step: output string length, default is 6", async () => {
+
+    result = dallmo_util_string.random();
+    result_length = result.length;
+    assertEquals( result_length, 6 );
+
+  }); // step
+  //.................................................
+  // 2. output length : random integer 1 - 999
+  await t.step("step: output string length, random 1 - 999 ", async () => {
+
+    const random_string_length: number = dallmo_util_math.random_integer(1,999);
+    const option_obj: any = {
+      random_string_length: random_string_length,
+      array_char_avoid: default_random.array_char_avoid,
+    };
+    result = dallmo_util_string.random( option_obj );
+    result_length = result.length;
+    assertEquals( result_length, random_string_length );
+
+  }); // step
+  //.................................................
+
+}); // Deno.test, random
+//////////////////////////////////////////////////////////////
+
+
 

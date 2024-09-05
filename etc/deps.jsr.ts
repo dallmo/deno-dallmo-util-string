@@ -17,5 +17,15 @@ export {
 
   assertEquals
 
-} from "https://deno.land/std/assert/mod.ts";
+//} from "jsr:@std/assert@^0.224.0";
+} from "jsr:@std/assert"; // assume latest
 ////////////////////////////////////////////////////////////////////////////////
+
+//export * as dallmo_util_array from "jsr:@dallmo/util-array@^1.3.0";
+export * as dallmo_util_array from "jsr:@dallmo/util-array"; // assume latest
+
+////////////////////////////////////////////////////////////////////////////////
+// local modules
+export * from "../lib/util-random-string.ts";
+
+

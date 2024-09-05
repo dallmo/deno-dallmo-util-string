@@ -18,5 +18,13 @@ export {
 
   assertEquals
 
-} from "https://deno.land/std@0.218.2/assert/mod.ts";
+//} from "https://deno.land/std@0.218.2/assert/mod.ts";
+// assum latest version instead
+} from "https://deno.land/std/assert/mod.ts";
 ////////////////////////////////////////////////////////////////////////////////
+
+export * as dallmo_util_array from "https://deno.land/x/dallmo_util_array/mod.ts";
+export * as dallmo_util_math  from "https://deno.land/x/dallmo_util_math/mod.ts";
+
+export * as util_random_string from "../lib/util-random-string.ts";
+
