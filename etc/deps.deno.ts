@@ -22,8 +22,10 @@ export {
 // assum latest version instead
 } from "https://deno.land/std/assert/mod.ts";
 ////////////////////////////////////////////////////////////////////////////////
-
+// remote modules
 export * as dallmo_util_array from "https://deno.land/x/dallmo_util_array/mod.ts";
+export * as dallmo_util_math  from "https://deno.land/x/dallmo_util_math/mod.ts";
 
+// local modules
 export * as util_random_string from "../lib/util-random-string.ts";
 

@@ -20,9 +20,9 @@ export {
 //} from "jsr:@std/assert@^0.224.0";
 } from "jsr:@std/assert"; // assume latest
 ////////////////////////////////////////////////////////////////////////////////
-
-//export * as dallmo_util_array from "jsr:@dallmo/util-array@^1.3.0";
+// remote modules
 export * as dallmo_util_array from "jsr:@dallmo/util-array"; // assume latest
+export * as dallmo_util_math  from "jsr:@dallmo/util-math";  // assume latest
 
 ////////////////////////////////////////////////////////////////////////////////
 // local modules
