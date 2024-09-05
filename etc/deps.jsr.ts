@@ -26,6 +26,5 @@ export * as dallmo_util_math  from "jsr:@dallmo/util-math";  // assume latest
 
 ////////////////////////////////////////////////////////////////////////////////
 // local modules
-export * from "../lib/util-random-string.ts";
-
+export * as util_random_string from "../lib/util-random-string.ts";
 
