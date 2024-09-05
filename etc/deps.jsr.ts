@@ -18,11 +18,11 @@ export {
   assertEquals
 
 //} from "jsr:@std/assert@^0.224.0";
-} from "jsr:@std/assert"; // assume latest
+} from "jsr:@std/assert@^1.0.3"; // assume latest
 ////////////////////////////////////////////////////////////////////////////////
 // remote modules
-export * as dallmo_util_array from "jsr:@dallmo/util-array"; // assume latest
-export * as dallmo_util_math  from "jsr:@dallmo/util-math";  // assume latest
+export * as dallmo_util_array from "jsr:@dallmo/util-array@^1.3.0"; // assume latest
+export * as dallmo_util_math  from "jsr:@dallmo/util-math@^1.1.0";  // assume latest
 
 ////////////////////////////////////////////////////////////////////////////////
 // local modules
