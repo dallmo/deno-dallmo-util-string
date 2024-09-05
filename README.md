@@ -13,6 +13,7 @@
 - case_upper
 - head
 - tail
+- random
 
 
 # usage
