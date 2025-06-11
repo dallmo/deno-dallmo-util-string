@@ -106,7 +106,7 @@ Deno.test( "test - head", async(t) => {
   //---------------------------------------------------------
   // steps to test on different cases
   // num < input_string char num
-  await t.step("step : num < input_string char num", async () => {
+  await t.step("step : num < input_string char num", () => {
     
     num = 2; expected_result = "ab";
     result = dallmo_util_string.head( input_string, num );
@@ -115,7 +115,7 @@ Deno.test( "test - head", async(t) => {
   }); // step
   //.................................................
   // num > input_string char num
-  await t.step("step : num > input_string char num", async () => {
+  await t.step("step : num > input_string char num", () => {
     
     num = 20; expected_result = input_string;
     result = dallmo_util_string.head( input_string, num );
@@ -124,7 +124,7 @@ Deno.test( "test - head", async(t) => {
   }); // step
   //.................................................
   // num = 0
-  await t.step("step : num = 0", async () => {
+  await t.step("step : num = 0", () => {
 
     num = 0; expected_result = "";
     result = dallmo_util_string.head( input_string, num );
@@ -133,7 +133,7 @@ Deno.test( "test - head", async(t) => {
   }); // step
   //.................................................
   // num < 0
-  await t.step("step : num < 0", async () => {
+  await t.step("step : num < 0", () => {
 
     num = -1; expected_result = "";
     result = dallmo_util_string.head( input_string, num );
@@ -153,7 +153,7 @@ Deno.test( "test - tail", async(t) => {
   //---------------------------------------------------------
   // steps to test on different cases
   // num < input_string char num
-  await t.step("step : num < input_string char num", async () => {
+  await t.step("step : num < input_string char num", () => {
     
     num = 2; expected_result = "de";
     result = dallmo_util_string.tail( input_string, num );
@@ -162,7 +162,7 @@ Deno.test( "test - tail", async(t) => {
   }); // step
   //.................................................
   // num > input_string char num
-  await t.step("step : num > input_string char num", async () => {
+  await t.step("step : num > input_string char num", () => {
     
     num = 20; expected_result = input_string;
     result = dallmo_util_string.tail( input_string, num );
@@ -171,7 +171,7 @@ Deno.test( "test - tail", async(t) => {
   }); // step
   //.................................................
   // num = 0
-  await t.step("step : num = 0", async () => {
+  await t.step("step : num = 0", () => {
 
     num = 0; expected_result = "";
     result = dallmo_util_string.tail( input_string, num );
@@ -180,7 +180,7 @@ Deno.test( "test - tail", async(t) => {
   }); // step
   //.................................................
   // num < 0
-  await t.step("step : num < 0", async () => {
+  await t.step("step : num < 0", () => {
 
     num = -1; expected_result = "";
     result = dallmo_util_string.tail( input_string, num );
@@ -196,7 +196,7 @@ Deno.test( "test - random", async(t) => {
   let result_length: number;
   //.................................................
   // 1. output length : == 6, default
-  await t.step("step: output string length, default is 6", async () => {
+  await t.step("step: output string length, default is 6", () => {
 
     result = dallmo_util_string.random();
     result_length = result.length;
@@ -205,7 +205,7 @@ Deno.test( "test - random", async(t) => {
   }); // step
   //.................................................
   // 2. output length : random integer 1 - 999
-  await t.step("step: output string length, random 1 - 999 ", async () => {
+  await t.step("step: output string length, random 1 - 999 ", () => {
 
     const random_string_length: number = dallmo_util_math.random_integer(1,999);
     const option_obj: any = {
